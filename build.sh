@@ -93,6 +93,7 @@ installpackages+="vlc "
 
 # customize
 installpackages+="openssl "
+installpackages+="python3 python3-dev python3-pip "
 installpackages+="arc-theme "
 installpackages+="git git-flow git-lfs "
 installpackages+="gnome-mpv folder-color "
@@ -100,7 +101,6 @@ installpackages+="gnome-shell-extension-appindicator gnome-shell-extension-autoh
 installpackages+="ibus-table-cangjie3 "
 installpackages+="imwheel htop httpie "
 # installpackages+="p7zip-full "
-# installpackages+="python3 python3-dev python3-pip "
 # installpackages+="tmux "
 # installpackages+="tree "
 # installpackages+="wget curl "
