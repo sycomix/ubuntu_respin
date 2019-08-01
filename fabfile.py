@@ -13,13 +13,18 @@ from fabric.contrib.project import *
 import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
+iso_filename = 'linuxium-v5.3-rc2-origin.iso'
+output_iso = os.path.join(CWD,iso_filename)
+
 CWD = os.path.dirname(__file__)
 print("CWD: %s" % CWD)
 
+def get_file_info(file_path):
+    with lcd(CWD):
+        local('ls -l %s' % file_path)
+
 def upload_to_file_io():
-    iso_filename = 'linuxium-v5.3-rc2-origin.iso'
     expire='?expires=1w'
-    output_iso = os.path.join(CWD,iso_filename)
     if check_iso_exist(output_iso):
         with lcd(CWD):
             print()
@@ -32,8 +37,6 @@ def upload_to_file_io():
 
 
 def upload_to_transfer_sh():
-    iso_filename = 'linuxium-v5.3-rc2-origin.iso'
-    output_iso = os.path.join(CWD,iso_filename)
     if check_iso_exist(output_iso):
         with lcd(CWD):
             local("curl --upload-file %s https://transfer.sh/%s " % (output_iso, iso_filename))
@@ -69,4 +72,8 @@ def helloworld():
         local('./build.sh  ./origin/origin.iso -c bionicbeaver')
         print("isprespin done")
         upload_to_transfer_sh()
+
+        print(green('file info:'))
+        print(green('-'*80))
+        print(get_file_info(output_iso))
         upload_to_file_io()
