@@ -13,10 +13,10 @@ from fabric.contrib.project import *
 import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
+CWD = os.path.dirname(__file__)
 iso_filename = 'linuxium-v5.3-rc2-origin.iso'
 output_iso = os.path.join(CWD,iso_filename)
 
-CWD = os.path.dirname(__file__)
 print("CWD: %s" % CWD)
 
 def get_system_info():
