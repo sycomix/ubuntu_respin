@@ -12,7 +12,7 @@ import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
 def helloworld():
-    with lcd(os.path.dirname(__file__)), settings(warn_only=True):
+    with lcd(os.path.dirname(__file__)), settings(warn_only=False):
         local('rm -rf ./origin/*.iso')
         local('rm -rf .isorespin.sh.lock')
         local('rm -rf ./linuxium*.iso')
