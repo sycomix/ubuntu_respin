@@ -92,13 +92,6 @@ installpackages+="gstreamer1.0-vaapi "
 installpackages+="vlc "
 
 # customize
-# installpackages+="docker-ce docker-ce-cli containerd.io "
-# installpackages+="filezilla chromium-browser "
-# installpackages+="pycharm-community "
-# installpackages+="slack-desktop "
-# installpackages+="spotify-client "
-# installpackages+="tmate "
-# installpackages+="vscode "
 installpackages+="arc-theme "
 installpackages+="git git-flow git-lfs "
 installpackages+="gnome-mpv folder-color "
@@ -112,7 +105,13 @@ installpackages+="gnome-mpv folder-color "
 # installpackages+="tree "
 # installpackages+="wget curl "
 # installpackages+="zsh zsh-syntax-highlighting "
-
+# installpackages+="docker-ce docker-ce-cli containerd.io "
+# installpackages+="filezilla chromium-browser "
+# installpackages+="pycharm-community "
+# installpackages+="slack-desktop "
+# installpackages+="spotify-client "
+# installpackages+="tmate "
+# installpackages+="vscode "
 
 # Packages that will be removed:
 #removepackages=""
