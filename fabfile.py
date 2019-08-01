@@ -19,6 +19,10 @@ output_iso = os.path.join(CWD,iso_filename)
 CWD = os.path.dirname(__file__)
 print("CWD: %s" % CWD)
 
+def get_system_info():
+    local('df -kh')
+
+
 def get_file_info(file_path):
     with lcd(CWD):
         local('ls -l %s' % file_path)
@@ -76,4 +80,5 @@ def helloworld():
         print(green('file info:'))
         print(green('-'*80))
         print(get_file_info(output_iso))
+        print(get_system_info())
         upload_to_file_io()
