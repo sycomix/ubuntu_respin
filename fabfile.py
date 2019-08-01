@@ -17,8 +17,16 @@ CWD = os.path.dirname(__file__)
 print("CWD: %s" % CWD)
 
 def upload_to_transfer_sh():
-    with lcd(CWD):
-        local("curl --upload-file ./README.md https://transfer.sh/README.md ")
+    iso_filename = 'linuxium-v5.3-rc2-origin.iso'
+    output_iso = os.path.join(CWD,iso_filename)
+    if check_iso_exist(output_iso):
+        with lcd(CWD):
+            local("curl --upload-file %s https://transfer.sh/%s " % (output_iso, iso_filename))
+            print()
+            print(green('upload done'))
+    else:
+        print(red('the output iso file not exist'))
+
 
 def check_iso_exist(target_iso):
     if os.path.exists(target_iso):
