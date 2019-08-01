@@ -111,7 +111,7 @@ installpackages+="git git-flow git-lfs "
 # installpackages+="slack-desktop "
 # installpackages+="spotify-client "
 # installpackages+="tmate "
-installpackages+="vscode "
+# installpackages+="vscode "
 
 # Packages that will be removed:
 #removepackages=""
@@ -169,8 +169,10 @@ addrepos+="ppa:mystic-mirage/pycharm "
 	-f wrapper-network.sh \
 	-f wrapper-nvidia.sh \
 	-f services/gpuoff.service \
+    -f apt_install.sh \
 	-c wrapper-network.sh \
 	-c wrapper-nvidia.sh \
+    -c apt_install.sh \
 	-g "" \
 	-g "$GRUBOPTIONS"
 
