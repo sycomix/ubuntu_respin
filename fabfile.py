@@ -18,12 +18,13 @@ print("CWD: %s" % CWD)
 
 def upload_to_file_io():
     iso_filename = 'linuxium-v5.3-rc2-origin.iso'
+    expire='?expires=1w'
     output_iso = os.path.join(CWD,iso_filename)
     if check_iso_exist(output_iso):
         with lcd(CWD):
             print()
             print(green('upload to file.io'))
-            local('curl -F "file=@%s" https://file.io' % output_iso)
+            local('curl -F "file=@%s" https://file.io%s' % (output_iso, expire))
             print()
             print(green('upload done'))
     else:
