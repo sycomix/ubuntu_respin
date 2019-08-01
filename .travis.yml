@@ -4,6 +4,7 @@ python:
   - "3.6"
 
 install:
+  - apt install -y git wget genisoimage bc squashfs-tools xorriso
   - pip3 install pipenv
   - pipenv install fabric3
 
