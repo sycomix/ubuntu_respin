@@ -9,4 +9,5 @@ install:
   - pipenv install fabric3
 
 script:
+  - wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin
   - fab helloworld
