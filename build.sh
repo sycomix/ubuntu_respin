@@ -92,7 +92,7 @@ installpackages+="gstreamer1.0-vaapi "
 installpackages+="vlc "
 
 # customize
-installpackages+="ibus-table-cangjie3 sendanywhere potify-client "
+installpackages+="ibus-table-cangjie3 spotify-client "
 installpackages+="tmux tmate "
 installpackages+="tree "
 installpackages+="python3 python3-dev python3-pip "
