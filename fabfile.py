@@ -22,3 +22,4 @@ def helloworld():
             local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
             # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
             local('./build.sh  ./origin/origin.iso -c bionicbeaver')
+            print("done")
