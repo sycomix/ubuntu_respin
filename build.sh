@@ -111,7 +111,7 @@ installpackages+="zsh zsh-syntax-highlighting "
 # installpackages+="slack-desktop "
 # installpackages+="spotify-client "
 # installpackages+="tmate "
-# installpackages+="vscode "
+installpackages+="vscode "
 
 # Packages that will be removed:
 #removepackages=""
