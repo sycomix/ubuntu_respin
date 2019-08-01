@@ -12,14 +12,13 @@ import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
 def helloworld():
-    with lcd(os.path.dirname(__file__)):
-        with settings(warn_only=True):
-            local('rm -rf ./origin/*.iso')
-            local('rm -rf .isorespin.sh.lock')
-            local('rm -rf ./linuxium*.iso')
-            local('sudo rm -rf ./isorespin')
-            print("clear directory done")
-            local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
-            # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
-            local('./build.sh  ./origin/origin.iso -c bionicbeaver')
-            print("done")
+    with lcd(os.path.dirname(__file__)), settings(warn_only=True):
+        local('rm -rf ./origin/*.iso')
+        local('rm -rf .isorespin.sh.lock')
+        local('rm -rf ./linuxium*.iso')
+        local('sudo rm -rf ./isorespin')
+        print("clear directory done")
+        local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
+        # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
+        local('./build.sh  ./origin/origin.iso -c bionicbeaver')
+        print("done")
