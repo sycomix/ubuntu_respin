@@ -14,3 +14,6 @@ install:
 
 script:
   - pipenv run fab helloworld
+
+notifications:
+  slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
