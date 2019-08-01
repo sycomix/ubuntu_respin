@@ -12,6 +12,7 @@ import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
 CWD = os.path.dirname(__file__)
+print("CWD: %s" % CWD)
 
 def upload_to_transfer_sh():
     with lcd(CWD):
