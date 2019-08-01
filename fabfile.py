@@ -2,6 +2,8 @@
 
 import os,sys
 
+from chalk import *
+
 from fabric.api import *
 from fabric.colors import *
 from fabric.context_managers import *
@@ -18,15 +20,28 @@ def upload_to_transfer_sh():
     with lcd(CWD):
         local("curl --upload-file ./README.md https://transfer.sh/README.md ")
 
+def check_iso_exist(target_iso):
+    if os.path.exists(target_iso):
+        return True
+    else:
+        return False
+
 def helloworld():
     with lcd(CWD), settings(warn_only=False):
-        local('rm -rf ./origin/*.iso')
+        # local('rm -rf ./origin/*.iso')
+
+        if check_iso_exist(os.path.join(CWD,'origin/origin.iso')):
+            print(yellow("iso file exist, skipping download"))
+            pass
+        else:
+            print(yellow("iso file not exist, download from ubuntu"))
+            local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
+
         local('rm -rf ./destination/*.iso')
         local('rm -rf .isorespin.sh.lock')
         local('rm -rf ./linuxium*.iso')
         local('sudo rm -rf ./isorespin')
         print("clear directory done")
-        local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
         # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
         local('./build.sh  ./origin/origin.iso -c bionicbeaver')
         print("isprespin done")
