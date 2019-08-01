@@ -16,6 +16,7 @@ def helloworld():
         with settings(warn_only=True):
             local('rm -rf ./origin/*')
             local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
+            # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
             local('rm -rf .isorespin.sh.lock')
             local('rm -rf ./linuxium*.iso')
             local('sudo rm -rf ./isorespin')
