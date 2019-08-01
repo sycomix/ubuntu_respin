@@ -18,7 +18,7 @@ def upload_to_transfer_sh():
         local("curl --upload-file ./README.md https://transfer.sh/README.md ")
 
 def helloworld():
-    with lcd(CWD), settings(warn_only=True):
+    with lcd(CWD), settings(warn_only=False):
         local('rm -rf ./origin/*.iso')
         local('rm -rf .isorespin.sh.lock')
         local('rm -rf ./linuxium*.iso')
@@ -27,5 +27,5 @@ def helloworld():
         local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
         # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
         local('./build.sh  ./origin/origin.iso -c bionicbeaver')
-        print("done")
+        print("isprespin done")
         upload_to_transfer_sh()
