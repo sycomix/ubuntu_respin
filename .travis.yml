@@ -10,7 +10,7 @@ cache:
 install:
   - sudo apt update && sudo apt install -y git wget genisoimage bc squashfs-tools xorriso
   - pip3 install pipenv
-  - pipenv install fabric3
+  - pipenv install --skip-lock pip==18 fabric3 pychalk
 
 script:
-  - fab helloworld
+  - pipenv run fab helloworld
