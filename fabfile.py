@@ -20,6 +20,7 @@ def upload_to_transfer_sh():
 def helloworld():
     with lcd(CWD), settings(warn_only=False):
         local('rm -rf ./origin/*.iso')
+        local('rm -rf ./destination/*.iso')
         local('rm -rf .isorespin.sh.lock')
         local('rm -rf ./linuxium*.iso')
         local('sudo rm -rf ./isorespin')
