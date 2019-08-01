@@ -1,0 +1,7 @@
+
+*iso
+*lock
+*.log
+destination/*
+origin/*
+isorespin/*
