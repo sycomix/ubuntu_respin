@@ -14,7 +14,9 @@ total_cpu_threads = multiprocessing.cpu_count()
 def helloworld():
     with lcd(os.path.dirname(__file__)):
         with settings(warn_only=True):
+            local('rm -rf ./origin/*')
+            local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
             local('rm -rf .isorespin.sh.lock')
             local('rm -rf ./linuxium*.iso')
             local('sudo rm -rf ./isorespin')
-            local('./build.sh  ./origin/ubuntu-19.04-desktop-amd64.iso -c bionicbeaver')
+            local('./build.sh  ./origin/origin.iso -c bionicbeaver')
