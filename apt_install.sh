@@ -25,3 +25,6 @@ sudo add-apt-repository -y ppa:rvm/smplayer
 sudo add-apt-repository -y ppa:snwh/ppa
 sudo add-apt-repository -y ppa:ubuntuhandbook1/apps
 sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
+
+# ibus-table-cangjie3
+sudo apt install -y ibus-table-cangjie3
