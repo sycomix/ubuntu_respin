@@ -16,6 +16,8 @@ total_cpu_threads = multiprocessing.cpu_count()
 CWD = os.path.dirname(__file__)
 iso_filename = 'linuxium-v5.3-rc2-origin.iso'
 output_iso = os.path.join(CWD,iso_filename)
+isorespin_log_path = os.path.join(CWD, 'isorespin.log')
+
 
 print("CWD: %s" % CWD)
 
@@ -29,13 +31,13 @@ def get_file_info(file_path):
     with lcd(CWD):
         local('ls -l %s' % file_path)
 
-def upload_to_file_io():
+def upload_to_file_io(local_filepath):
     expire='?expires=1w'
-    if check_iso_exist(output_iso):
+    if check_iso_exist(local_filepath):
         with lcd(CWD):
             print()
-            print(green('upload to file.io'))
-            local('curl -F "file=@%s" https://file.io%s' % (output_iso, expire))
+            print(green('upload to file.io %s' % local_filepath))
+            local('curl -F "file=@%s" https://file.io%s' % (local_filepath, expire))
             print()
             print(green('upload done'))
     else:
@@ -85,7 +87,8 @@ def helloworld():
 
         print(yellow('starting upload'))
         # upload_to_transfer_sh()
-        upload_to_file_io()
+        upload_to_file_io(output_iso)
+        upload_to_file_io(isorespin_log_path)
 
         print(yellow('print system info:'))
         print(green('file info:'))
