@@ -21,6 +21,8 @@ print("CWD: %s" % CWD)
 
 def get_system_info():
     local('df -kh')
+    local('free')
+    local('date')
 
 
 def get_file_info(file_path):
