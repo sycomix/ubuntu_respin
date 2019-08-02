@@ -47,7 +47,7 @@ def helloworld():
             pass
         else:
             print(yellow("iso file not exist, download from ubuntu"))
-            if get_hostname() in['logic-ThinkCentre-M73', 'logic-ThinkPad-X201']
+            if get_hostname() in['logic-ThinkCentre-M73', 'logic-ThinkPad-X201']:
                 local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
             else:
                 local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
