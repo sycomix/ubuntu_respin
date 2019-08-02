@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # https://code.visualstudio.com/docs/setup/linux
-pwd
 cd /usr/local/bin
 
 sudo curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -12,8 +11,8 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code # or code-insiders
 
-which code
 
+# add custom repository
 sudo add-apt-repository -y ppa:daniruiz/flat-remix
 sudo add-apt-repository -y ppa:dhor/myway
 sudo add-apt-repository -y ppa:js-reynaud/kicad-5.1
