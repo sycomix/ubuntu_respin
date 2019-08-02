@@ -128,5 +128,3 @@ echo "isorespin.sh -i $INPUTFOLDER$ISOFILE"
     -c apt_install.sh \
 	-g "" \
 	-g "$GRUBOPTIONS"
-
-# dd if=./linuxium-ubuntu-19.04-desktop-amd64.iso of=/dev/sdb bs=999M
