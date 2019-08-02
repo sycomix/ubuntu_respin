@@ -30,4 +30,4 @@ sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
 sudo apt-get install software-properties-common && \
 sudo add-apt-repository ppa:tmate.io/archive    && \
 sudo apt-get update                             && \
-sudo apt-get install tmate
+sudo apt-get install -y tmate
