@@ -131,40 +131,9 @@ fi
 
 echo "isorespin.sh -i $INPUTFOLDER$ISOFILE"
 
-addrepos=""
-addrepos+="ppa:daniruiz/flat-remix "
-addrepos+="ppa:dhor/myway "
-addrepos+="ppa:js-reynaud/kicad-5.1 "
-addrepos+="ppa:freecad-maintainers/freecad-stable "
-addrepos+="ppa:kritalime/ppa "
-addrepos+="ppa:maarten-fonville/android-studio "
-addrepos+="ppa:morphis/anbox-support "
-addrepos+="ppa:nilarimogard/webupd8 "
-addrepos+="ppa:rvm/smplayer "
-addrepos+="ppa:snwh/ppa "
-addrepos+="ppa:ubuntuhandbook1/apps "
-addrepos+="ppa:lyzardking/ubuntu-make "
-addrepos+="ppa:mystic-mirage/pycharm "
-
 ./isorespin.sh -i "$INPUTFOLDER""$ISOFILE" \
 	$KERNELARGS \
 	-r "ppa:graphics-drivers/ppa" \
-	-r "ppa:daniruiz/flat-remix" \
-	-r "ppa:dhor/myway" \
-	-r "ppa:js-reynaud/kicad-5.1" \
-	-r "ppa:freecad-maintainers/freecad-stable" \
-	-r "ppa:kritalime/ppa" \
-	-r "ppa:maarten-fonville/android-studio" \
-	-r "ppa:morphis/anbox-support" \
-	-r "ppa:nilarimogard/webupd8" \
-	-r "ppa:rvm/smplayer" \
-	-r "ppa:snwh/ppa" \
-	-r "ppa:ubuntuhandbook1/apps" \
-	-r "ppa:lyzardking/ubuntu-make" \
-	-r "deb https://packages.microsoft.com/repos/vscode stable main" --key "adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF" \
-	-r "deb http://packages.cloud.google.com/apt cloud-sdk-bionic main" --key "adv --keyserver keyserver.ubuntu.com --recv-keys 6A030B21BA07F4FB" \
-	-r "deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"  --key "adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5" --key "adv --keyserver keyserver.ubuntu.com --recv-keys C6ABDCF64DB9A0B2" \
-	-r "https://download.docker.com/linux/ubuntu bionic stable"  --key "adv --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8" \
 	-p "$installpackages" \
 	-f wrapper-network.sh \
 	-f wrapper-nvidia.sh \
