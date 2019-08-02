@@ -77,10 +77,13 @@ def helloworld():
         # local('wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
         local('./build.sh  ./origin/origin.iso -c bionicbeaver')
         print("isprespin done")
-        upload_to_transfer_sh()
 
+        print(yellow('starting upload'))
+        # upload_to_transfer_sh()
+        upload_to_file_io()
+
+        print(yellow('print system info:'))
         print(green('file info:'))
         print(green('-'*80))
         print(get_file_info(output_iso))
         print(get_system_info())
-        upload_to_file_io()
