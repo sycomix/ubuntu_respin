@@ -29,3 +29,4 @@ sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
 
 # update swapiness
 sudo bash -c "echo 'vm.swappiness = 15' >> /etc/sysctl.conf"
+cat /etc/sysctl.conf
