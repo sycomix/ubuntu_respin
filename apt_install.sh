@@ -25,3 +25,7 @@ sudo add-apt-repository -y ppa:rvm/smplayer
 sudo add-apt-repository -y ppa:snwh/ppa
 sudo add-apt-repository -y ppa:ubuntuhandbook1/apps
 sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
+
+
+# update swapiness
+sudo bash -c "echo 'vm.swappiness = 15' >> /etc/sysctl.conf"
