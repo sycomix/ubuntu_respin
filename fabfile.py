@@ -95,4 +95,3 @@ def helloworld():
         print(green('-'*80))
         print(get_file_info(output_iso))
         print(get_system_info())
-        upload_to_transfer_sh()
