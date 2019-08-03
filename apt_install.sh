@@ -25,3 +25,9 @@ sudo add-apt-repository -y ppa:rvm/smplayer
 sudo add-apt-repository -y ppa:snwh/ppa
 sudo add-apt-repository -y ppa:ubuntuhandbook1/apps
 sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
+
+# apt clean cache
+sudo apt update
+sudo apt upgrade -y
+sudo apt-get autoclean
+sudo apt-get clean
