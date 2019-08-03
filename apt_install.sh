@@ -28,3 +28,4 @@ sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
 
 # slack-desktop
 sudo apt install -y slack-desktop
+which slack
