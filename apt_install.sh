@@ -33,3 +33,5 @@ cat /etc/sysctl.conf
 
 # installpackages+="zsh zsh-syntax-highlighting "
 sudo apt install -y zsh zsh-syntax-highlighting
+
+sudo apt install -y code
