@@ -43,3 +43,6 @@ which curl
 sudo apt install -y filezilla chromium-browser
 which chromium-browser
 which filezilla
+
+sudo apt install -y htop
+which htop
