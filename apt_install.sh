@@ -67,3 +67,8 @@ which tree
 sudo apt install -y ruby ruby-dev
 which ruby
 ruby -v
+
+sudo apt install -y python3 python3-dev python3-pip
+which python3
+which python
+which pip3
