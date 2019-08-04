@@ -3,17 +3,12 @@ language: python
 python:
   - "3.6"
 
-addons:
-  apt:
-    packages:
-      - p7zip-full
-
 cache:
   directories:
     - /home/travis/build/louiscklaw/ubuntu_respin/origin
 
 install:
-  - sudo apt update && sudo apt install -y git wget genisoimage bc squashfs-tools xorriso
+  - sudo apt update && sudo apt install -y git wget genisoimage bc squashfs-tools xorriso p7zip-full
   - pip3 install pipenv
   - pipenv install pip==18 fabric3 pychalk
 
