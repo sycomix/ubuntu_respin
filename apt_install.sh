@@ -57,3 +57,6 @@ which imwheel
 
 sudo apt install -y tmux
 which tmux
+
+sudo apt install -y wget
+which wget
