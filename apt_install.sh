@@ -36,3 +36,6 @@ sudo apt install -y zsh zsh-syntax-highlighting
 
 sudo apt install -y code
 which code
+
+sudo apt install -y curl
+which curl
