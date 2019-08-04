@@ -63,3 +63,7 @@ which wget
 
 sudo apt install -y tree
 which tree
+
+sudo apt install -y ruby ruby-dev
+which ruby
+ruby -v
