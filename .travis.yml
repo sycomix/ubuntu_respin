@@ -15,9 +15,6 @@ install:
 script:
   - pipenv run fab helloworld
 
-notifications:
-  slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
-
 before_deploy: 7za a -t7z release.7z linuxium-v5.3-rc2-origin.iso
 
 deploy:
@@ -32,3 +29,6 @@ deploy:
   on:
     tags: true
     repo: louiscklaw/ubuntu_respin
+
+notifications:
+  slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
