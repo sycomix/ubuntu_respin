@@ -54,3 +54,6 @@ sudo apt install -y ibus-table-cangjie3
 
 sudo apt install -y imwheel
 which imwheel
+
+sudo apt install -y tmux
+which tmux
