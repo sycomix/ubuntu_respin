@@ -26,8 +26,6 @@ sudo add-apt-repository -y ppa:snwh/ppa
 sudo add-apt-repository -y ppa:ubuntuhandbook1/apps
 sudo add-apt-repository -y ppa:lyzardking/ubuntu-make
 
-<<<<<<< HEAD
-
 # update swapiness
 sudo bash -c "echo 'vm.swappiness = 15' >> /etc/sysctl.conf"
 cat /etc/sysctl.conf
@@ -50,7 +48,9 @@ which htop
 
 sudo apt install -y httpie
 which httpie
-=======
+
 # ibus-table-cangjie3
 sudo apt install -y ibus-table-cangjie3
->>>>>>> feature/apt_install_ibus-table-cangjie3
+
+sudo apt install -y imwheel
+which imwheel
