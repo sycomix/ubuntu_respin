@@ -46,3 +46,6 @@ which filezilla
 
 sudo apt install -y htop
 which htop
+
+sudo apt install -y httpie
+which httpie
