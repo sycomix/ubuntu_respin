@@ -35,3 +35,4 @@ cat /etc/sysctl.conf
 sudo apt install -y zsh zsh-syntax-highlighting
 
 sudo apt install -y code
+which code
