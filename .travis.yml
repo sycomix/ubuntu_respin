@@ -18,7 +18,7 @@ script:
 notifications:
   slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
 
-before_deploy: 7za a -t7z linuxium-v5.3-rc2-origin.iso release.7z
+before_deploy: 7za a -t7z release.7z linuxium-v5.3-rc2-origin.iso
 
 deploy:
   provider: releases
