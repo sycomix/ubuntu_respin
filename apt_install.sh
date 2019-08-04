@@ -39,3 +39,7 @@ which code
 
 sudo apt install -y curl
 which curl
+
+sudo apt install -y filezilla chromium-browser
+which chromium-browser
+which filezilla
