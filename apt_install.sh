@@ -60,3 +60,6 @@ which tmux
 
 sudo apt install -y wget
 which wget
+
+sudo apt install -y tree
+which tree
