@@ -15,14 +15,16 @@ install:
 script:
   - pipenv run fab helloworld
 
-before_deploy: 7za a -t7z release.7z linuxium-v5.3-rc2-origin.iso
+before_deploy:
+  - 7za a -t7z ubuntu_1904_respun.7z linuxium-v5.3-rc2-origin.iso
+  - ls -lh ubuntu_1904_respun.7z
 
 deploy:
   provider: releases
   api_key:
     secure: zB0tgeWTvhewmSKL4V+/B3Q4GVo82YBzQ9s139KBJhbChQ1CAlSZymllBB1pZoNvuBIeJRHNKGlEDdtdLxVTrsf56KW+hG3KKT5LdEA5WJJmoaiAZnbAnaKlZ6TKB3VD25++cJCt74wyj0/127HpUFI+JSRMnYmT2+Ud0zyRH0XtQRpKzGyfH4muAMAv/SCpDNpWPfKESCr+AO+TF7R4in2OCNGWvIsAAArBnubHG6xr+BFOzxkxAQz6Pq8EOTTnmDktvOW6gfzV24PvTSXMRjtqY7/RHm4rBA/1xNAMtZRi2Me53QNs93y/o56P1vfJRfaCS29WQsWUWE6VNE28qBF/BluFDwq188cBF06LHtZTVdlkyuoDyP7vAA3UIJEZfp3a53dEfahU1XtOn0vUjSFVgYn4iGVsw5dt0cb9MnDIqFcZERkeAijvVpguAwtSR0xy0CBzM0iPsg2CS5vazwheXgmEFpdCpaxE9SfNNigXg6In64+TzZoLQhkbd2AZw7ohZouHekKCiPCoVu9qtepI4JkDAUgMI7FZWTV+KGgwsxMU2yBrIWDQP9+roycGh+KxUCbcAYD0GgQvEgrghHhK1E7O6k8n9C+ySMjy1bBWLDvDLWps223x1Mq16rRpZlAlKPg5Q7A10zDSrkTKOR4hSCyvShih6aRzhe5kzf4=
   file:
-    - release.7z
+    - ubuntu_1904_respun.7z
     - isorespin.log
   skip_cleanup: true
   draft: true
