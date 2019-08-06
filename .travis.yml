@@ -14,8 +14,6 @@ install:
 
 script:
   - pipenv run fab helloworld
-
-before_deploy:
   - 7za a -t7z ubuntu_1904_respun.7z linuxium-v5.3-rc2-origin.iso
   - ls -lh ubuntu_1904_respun.7z
 
