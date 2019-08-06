@@ -85,13 +85,15 @@ def helloworld():
         local('./build.sh  ./origin/origin.iso -c bionicbeaver')
         print(green("isprespin done"))
 
-        print(yellow('starting upload'))
-        # upload_to_transfer_sh()
-        upload_to_file_io(output_iso)
-        upload_to_file_io(isorespin_log_path)
 
         print(yellow('print system info:'))
         print(green('file info:'))
         print(green('-'*80))
         print(get_file_info(output_iso))
         print(get_system_info())
+
+def upload():
+    print(yellow('starting upload'))
+    # upload_to_transfer_sh()
+    upload_to_file_io(output_iso)
+    upload_to_file_io(isorespin_log_path)
