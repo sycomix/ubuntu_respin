@@ -14,14 +14,14 @@ import multiprocessing
 total_cpu_threads = multiprocessing.cpu_count()
 
 CWD = os.path.dirname(__file__)
-print("CWD: %s" % CWD)
+print(f"CWD: {CWD}")
 
 def upload_to_transfer_sh():
     iso_filename = 'linuxium-v5.3-rc2-origin.iso'
     output_iso = os.path.join(CWD,iso_filename)
     if check_iso_exist(output_iso):
         with lcd(CWD):
-            local("curl --upload-file %s https://transfer.sh/%s " % (output_iso, iso_filename))
+            local(f"curl --upload-file {output_iso} https://transfer.sh/{iso_filename} ")
             print()
             print(green('upload done'))
     else:
@@ -29,18 +29,14 @@ def upload_to_transfer_sh():
 
 
 def check_iso_exist(target_iso):
-    if os.path.exists(target_iso):
-        return True
-    else:
-        return False
+    return bool(os.path.exists(target_iso))
 
 def helloworld():
-    with lcd(CWD), settings(warn_only=False):
+    with (lcd(CWD), settings(warn_only=False)):
         # local('rm -rf ./origin/*.iso')
 
         if check_iso_exist(os.path.join(CWD,'origin/origin.iso')):
             print(yellow("iso file exist, skipping download"))
-            pass
         else:
             print(yellow("iso file not exist, download from ubuntu"))
             local('wget http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso -O ./origin/origin.iso')
